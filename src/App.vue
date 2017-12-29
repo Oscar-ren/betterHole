@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <transition name="vux-pop-in" >
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
@@ -29,5 +33,24 @@
     flex-direction: column;
     color: #fff;
     background: linear-gradient(#0d161f, #77b8bf)
+  }
+
+  .vux-pop-in-enter-active,
+  .vux-pop-in-leave-active {
+    will-change: transform;
+    transition: all 500ms;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    perspective: 1000;
+  }
+
+  .vux-pop-in-enter {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  .vux-pop-in-leave-active {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
   }
 </style>

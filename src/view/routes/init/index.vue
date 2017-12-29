@@ -27,7 +27,8 @@
         <picker :data='floors' v-model='form.floor' :fixed-columns="3"></picker>
       </section>
       <footer>
-        <x-button type="primary" class="confirm" @click.native="submit">确定</x-button>
+        <cell title="Live Demo" link="/userInfo"></cell>
+        <!--<x-button type="primary" class="confirm" @click.native="submit">确定</x-button>-->
       </footer>
     </swipe-item>
   </swipe>
@@ -35,7 +36,7 @@
 
 <script>
   import 'vue-swipe/dist/vue-swipe.css';
-  import {Checker, CheckerItem, Picker, XButton} from 'vux';
+  import {Checker, CheckerItem, Picker, XButton, Cell} from 'vux';
   import { Swipe, SwipeItem } from 'vue-swipe';
   import UserService from '../../service/user';
 
@@ -56,7 +57,8 @@
       Checker,
       CheckerItem,
       Picker,
-      XButton
+      XButton,
+      Cell
     },
     data () {
       return {
@@ -78,6 +80,7 @@
       },
       submit() {
         UserService.userInfo = this.form;
+        this.$router.push('/userInfo');
         console.log(this.form)
       }
     }
