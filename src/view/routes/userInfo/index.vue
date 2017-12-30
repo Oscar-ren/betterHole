@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <div class="goBack">返回</div>
-    <div class="info">
+  <div id="app">
+    <header>
+      <div class="markup">
+        <x-button class="operate" link="/home"></x-button>
+      </div>
+    </header>
+    <div class="wrapper">
       <section class="profile">
         <i class="avatar"></i>
         <span>我的头像</span>
@@ -9,8 +13,6 @@
       <div class="detail">
         <group>
           <selector title="座次" :options="buildings" v-model="building"></selector>
-        </group>
-        <group>
           <selector title="楼层" :options="floors" v-model="floor"></selector>
         </group>
       </div>
@@ -19,7 +21,7 @@
 </template>
 
 <script>
-  import { Selector, Group, Cell, CellBox, XButton } from 'vux'
+  import { Selector, Group, Cell, CellBox, XButton, XHeader } from 'vux'
   import UserService from '../../service/user';
 
   let floors = [];
@@ -46,6 +48,9 @@
         floors: floors,
       }
     },
+    methods: {
+
+    },
     mounted() {
       let userInfo = UserService.getUserInfo();
       if (!userInfo.sex) {
@@ -57,7 +62,30 @@
   }
 </script>
 
-<style>
+<style scoped>
+  header {
+    & .markup {
+      display: inline-block;
+      position: relative;
+      background: #fff;
+      height: 12vw;
+      width: 10vw;
+      margin-top: 12vw;
+      border-right: 6vw solid #fff;
+      border-top-right-radius: 6vw;
+      border-bottom-right-radius: 6vw;
+
+      & .operate {
+        display: inline-block;
+        background: #000000;
+        height: 10vw;
+        width: 10vw;
+        border-radius: 50%;
+        margin: 1vw 0 1vw 4vw;
+      }
+    }
+  }
+
   .profile {
     display: flex;
     flex-direction: column;
@@ -71,5 +99,13 @@
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
+  }
+  .detail {
+    color: #000;
+
+    & >>> .weui-select {
+      text-indent: 80%;
+      color: #6e6a6a;
+    }
   }
 </style>

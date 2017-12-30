@@ -1,9 +1,9 @@
 // user info store
 
 let userInfo = {
-  sex: '',
-  building: '',
-  floor: '',
+  sex: 'male',
+  building: 'A',
+  floor: 7,
 };
 
 const updateUserInfo = function updateUserInfo (data) {

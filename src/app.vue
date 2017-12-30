@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <router-view></router-view>
+  <!--<div id="app">-->
     <!--<transition name="pop-in" >-->
       <!--<keep-alive>-->
         <!--<router-view></router-view>-->
       <!--</keep-alive>-->
     <!--</transition>-->
-  </div>
+  <!--</div>-->
 </template>
 
 <script>
