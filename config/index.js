@@ -11,7 +11,7 @@ module.exports = {
   },
   build: {
     env: prodEnv,
-    outputPath: 'dist/release',
+    outputPath: 'dist',
     assetsDirectory: 'assets',
     productionSourceMap: false,
   },

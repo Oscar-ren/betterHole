@@ -81,7 +81,7 @@
         this.$refs.swipe.next();
       },
       submit() {
-        UserService.userInfo = this.form;
+        UserService.updateUserInfo(this.form);
         this.$router.push('/userInfo');
       }
     }
@@ -97,7 +97,6 @@
   }
 
   footer {
-
     & button.confirm {
       margin-top: 8vh;
       width: 40vw;

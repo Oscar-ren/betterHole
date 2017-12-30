@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "fastclick": "^1.0.6",
+    "fs-extra": "^5.0.0",
     "postcss-cssnext": "^3.0.2",
     "style-loader": "^0.19.1",
     "vue": "^2.5.2",
