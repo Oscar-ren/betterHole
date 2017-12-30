@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import FastClick from 'fastclick';
 import VueRouter from 'vue-router';
-import App from './App';
+import App from './app.vue';
 import routes from './config/routes';
 
 Vue.use(VueRouter);

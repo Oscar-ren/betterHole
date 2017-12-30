@@ -1,5 +1,5 @@
 <template>
-  <swipe class="swiper-box" :disabled="swipeDisable" :defaultIndex="0"
+  <swipe class="swipe-box" :disabled="swipeDisable" :defaultIndex="0"
          showIndicators :continuous="false" :auto="0" ref="swipe">
     <swipe-item class="swipe-item">
       <header>Step:请选择性别</header>
@@ -27,8 +27,7 @@
         <picker :data='floors' v-model='form.floor' :fixed-columns="3"></picker>
       </section>
       <footer>
-        <cell title="Live Demo" link="/userInfo"></cell>
-        <!--<x-button type="primary" class="confirm" @click.native="submit">确定</x-button>-->
+        <x-button type="primary" class="confirm" @click.native="submit">开启寻坑之旅</x-button>
       </footer>
     </swipe-item>
   </swipe>
@@ -65,7 +64,7 @@
         form: {
           sex: '',
           building: '',
-          floor: [''],
+          floor: ['07'],
         },
         floors: [floors],
         swipeDisable: true
@@ -76,29 +75,25 @@
         this.$refs.swipe.prev();
       },
       next() {
+        if (this.form.building) {
+          this.swipeDisable = false;
+        }
         this.$refs.swipe.next();
       },
       submit() {
         UserService.userInfo = this.form;
         this.$router.push('/userInfo');
-        console.log(this.form)
       }
     }
   };
 </script>
 
 <style lang="postcss">
-  .swiper-box {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-  }
-
   header {
     height: 20vh;
     text-align: center;
     font-size: 1.2rem;
-    line-height: 30vh;
+    line-height: 25vh;
   }
 
   footer {
@@ -121,6 +116,12 @@
     margin-top: 10vh;
   }
 
+  .swipe-box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
   .swipe-item {
     height: 100%;
   }
@@ -141,7 +142,6 @@
   }
 
   .mint-swipe-indicators {
-
     bottom: 5vh;
 
     & .mint-swipe-indicator {
@@ -158,8 +158,6 @@
       }
     }
   }
-
-
 
   .scroller-component {
     width: 44% !important;

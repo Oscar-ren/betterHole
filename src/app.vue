@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <transition name="vux-pop-in" >
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
-    </transition>
+    <router-view></router-view>
+    <!--<transition name="pop-in" >-->
+      <!--<keep-alive>-->
+        <!--<router-view></router-view>-->
+      <!--</keep-alive>-->
+    <!--</transition>-->
   </div>
 </template>
 
@@ -35,8 +36,8 @@
     background: linear-gradient(#0d161f, #77b8bf)
   }
 
-  .vux-pop-in-enter-active,
-  .vux-pop-in-leave-active {
+  .pop-in-enter-active,
+  .pop-in-leave-active {
     will-change: transform;
     transition: all 500ms;
     height: 100%;
@@ -45,11 +46,11 @@
     perspective: 1000;
   }
 
-  .vux-pop-in-enter {
+  .pop-in-enter {
     opacity: 0;
     transform: translate3d(100%, 0, 0);
   }
-  .vux-pop-in-leave-active {
+  .pop-in-leave-active {
     opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
