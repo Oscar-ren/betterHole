@@ -2,7 +2,7 @@
 
 let userInfo = {
   sex: 'male',
-  building: 'B',
+  building: 'A',
   floor: 7,
 };
 
