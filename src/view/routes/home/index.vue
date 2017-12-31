@@ -6,7 +6,7 @@
       </div>
     </header>
     <swipe class="swipe-box" :defaultIndex="0"
-           showIndicators :continuous="false" :auto="0" ref="swipe">
+           showIndicators :continuous="false" :auto="0">
       <swipe-item class="swipe-item">
 
       </swipe-item>
