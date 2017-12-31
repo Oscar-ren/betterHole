@@ -7,8 +7,12 @@
         <section class="checker">
           <checker v-model="form.sex" @on-change="next"
                    default-item-class="checker-item" selected-item-class="checker-item-selected">
-            <checker-item value="male">男</checker-item>
-            <checker-item value="female">女</checker-item>
+            <checker-item value="male">
+              <i class="icon-male">男</i>
+            </checker-item>
+            <checker-item value="female">
+              <i class="icon-female">女</i>
+            </checker-item>
           </checker>
         </section>
       </swipe-item>
@@ -163,6 +167,26 @@
 
   section.picker {
     margin-top: 10vh;
+  }
+
+  .icon-male {
+    font-size: 0;
+    display: inline-block;
+    height: 14vw;
+    width: 14vw;
+    margin: 13vw 0;
+    background: url('/assets/images/male.png') no-repeat;
+    background-size: contain;
+  }
+
+  .icon-female {
+    font-size: 0;
+    display: inline-block;
+    height: 14vw;
+    width: 14vw;
+    margin: 13vw 0;
+    background: url('/assets/images/female.png') no-repeat;
+    background-size: contain;
   }
 
   .swipe-box {

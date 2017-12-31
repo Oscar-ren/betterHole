@@ -1,5 +1,7 @@
 import DataProvider from '@bbfe/data-provider';
 
+// let baseURL = '';
+let baseURL = 'http://47.88.155.92:8000';
 let id = 0;
 let ajax = new DataProvider({
   timeout: 5000,
@@ -16,6 +18,8 @@ const request = async (url, method, body) => {
   let options = {
     url,
     method,
+    baseURL,
+    credentials: 'omit',
     headers: {
       'Content-Type': 'application/json'
     }

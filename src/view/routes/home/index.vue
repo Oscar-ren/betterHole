@@ -14,7 +14,7 @@
             <div class="toilets">
               <ul>
                 <li v-for="(val, key, index) in val">
-                  <div class="toilet"></div>
+                  <div :class="`toilet ${val.stall_state}`"></div>
                 </li>
               </ul>
             </div>
@@ -28,7 +28,7 @@
             <div class="toilets">
               <ul>
                 <li v-for="(val, key, index) in val">
-                  <div class="toilet"></div>
+                  <div :class="`toilet ${val.stall_state}`"></div>
                 </li>
               </ul>
             </div>
@@ -92,10 +92,9 @@
         } else {
           this.defaultIndex = 0;
         }
-        ToiletService.getToilets().then(result => {
+        ToiletService.getToilets(userInfo.building).then(result => {
           this.toilets = result;
           this.$nextTick(() => {
-            console.log(userInfo.floor)
             this.scrollToFloor(userInfo.floor);
           })
         });
@@ -182,6 +181,7 @@
 
   .floorInfo {
     width: 20vw;
+    line-height: 1.8;
     text-align: right;
   }
 
@@ -192,9 +192,20 @@
     & .toilet {
       display: inline-block;
       width: 13vw;
-      height: 11vw;
-      margin: 0 2vw 2.4vh 0;
+      height: 13vw;
+      margin: 0 2vw 1vh 0;
       background: #000000;
+
+      &.occupied {
+        background: url('/assets/images/no.png');
+        background-size: contain;
+      }
+
+      &.vacant {
+        background: #fff;
+        background: url('/assets/images/yes.png');
+        background-size: contain;
+      }
     }
   }
 </style>
