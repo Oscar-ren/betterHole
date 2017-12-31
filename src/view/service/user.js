@@ -7,7 +7,7 @@ let userInfo = {
 };
 
 const updateUserInfo = function updateUserInfo (data) {
-  userInfo = {...data, floor: data.floor ? +data.floor[0] : userInfo.floor}
+  userInfo = {...userInfo, ...data}
 }
 
 const getUserInfo = function getUserInfo () {

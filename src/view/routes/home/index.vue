@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <div class="markup">
-        <a href="/userInfo"><i class="operate"></i></a>
+        <i class="operate" @click="changeRoute"></i>
       </div>
     </header>
     <swipe v-if="defaultIndex !== undefined" class="swipe-box" :defaultIndex="defaultIndex" :continuous="false"
@@ -85,6 +85,9 @@
         ToiletService.getToilets(index === 0 ? 'A' : 'B').then(result => {
           this.toilets = result;
         });
+      },
+      changeRoute() {
+        this.$router.push('/userInfo');
       }
     },
     mounted() {

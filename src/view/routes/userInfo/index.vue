@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <div class="markup">
-        <a href="/home"><i class="operate icon-user"></i></a>
+        <i class="operate icon-user" @click="changeRoute"></i>
       </div>
     </header>
     <div class="wrapper">
@@ -12,8 +12,8 @@
       </section>
       <div class="detail">
         <group>
-          <selector title="座次" :options="buildings" v-model="building"></selector>
-          <selector title="楼层" :options="floors" v-model="floor"></selector>
+          <selector title="座次" :options="buildings" v-model="building" @on-change="changeBuilding"></selector>
+          <selector title="楼层" :options="floors" v-model="floor" @on-change="changeFloor"></selector>
         </group>
       </div>
     </div>
@@ -49,10 +49,23 @@
       }
     },
     methods: {
-
+      changeBuilding(building) {
+        UserService.updateUserInfo({
+          building
+        })
+      },
+      changeFloor(floor) {
+        UserService.updateUserInfo({
+          floor
+        })
+      },
+      changeRoute() {
+        this.$router.push('/home');
+      }
     },
     mounted() {
       UserService.getUserInfo().then(userInfo => {
+        console.log(userInfo)
         if (!userInfo.sex) {
           this.$router.push('/');
         }

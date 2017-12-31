@@ -87,7 +87,11 @@
         this.$refs.swipe.next();
       },
       submit() {
-        UserService.updateUserInfo(this.form);
+
+        UserService.updateUserInfo({
+          ...this.form,
+          floor: +this.form.floor[0]
+        });
         this.$router.push('/home');
       }
     }
