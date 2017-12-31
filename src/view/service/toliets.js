@@ -5,7 +5,6 @@ const getToilets = function getToilets (building = 'A') {
   return UserService.getUserInfo().then(userInfo => {
     return Promise.all([ajax.request(`/v1/toilets?&toilet_type=${userInfo.sex}`), ajax.request('/v1/stalls')])
       .then(([toilets, stalls]) => {
-      console.log(toilets, stalls)
       toilets = toilets.result;
       stalls = stalls.result;
         // TODO 混合数据
@@ -29,7 +28,15 @@ const getToilets = function getToilets (building = 'A') {
           }
         }
 
-        console.log(floors);
+        // let keys = Object.keys(floors);
+        // let revertFloor = {};
+        // keys.sort((a, b) => b - a);
+        // console.log(keys);
+        // for (let i = 0; i < keys.length; i++) {
+        //   revertFloor[keys[i]] = floors[keys[i]];
+        // }
+        //
+        // console.log(revertFloor)
         return floors;
       });
   });

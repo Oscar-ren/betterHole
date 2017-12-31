@@ -9,11 +9,11 @@
            :auto="0" ref="swipe" showIndicators @change="changeIndex">
       <swipe-item class="swipe-item">
         <ul>
-          <li v-for="(val, key, index) in toilets" :class="`card floor${key}-A`">
-            <div class="floorInfo">{{`F${key < 10 ? '0' + key : key}-A`}}</div>
+          <li v-for="(item, index) in revertToilets" :class="`card floor${item}-A`">
+            <div class="floorInfo">{{`F${item < 10 ? '0' + item : item}-A`}}</div>
             <div class="toilets">
               <ul>
-                <li v-for="(val, key, index) in val">
+                <li v-for="(val, key, index) in toilets[item]">
                   <div :class="`toilet ${val.stall_state}`"></div>
                 </li>
               </ul>
@@ -23,11 +23,11 @@
       </swipe-item>
       <swipe-item class="swipe-item">
         <ul>
-          <li v-for="(val, key, index) in toilets" :class="`card floor${key}-B`">
-            <div class="floorInfo">{{`F${key < 10 ? '0' + key : key}-B`}}</div>
+          <li v-for="(item, index) in revertToilets" :class="`card floor${item}-B`">
+            <div class="floorInfo">{{`F${item < 10 ? '0' + item : item}-B`}}</div>
             <div class="toilets">
               <ul>
-                <li v-for="(val, key, index) in val">
+                <li v-for="(val, key, index) in toilets[item]">
                   <div :class="`toilet ${val.stall_state}`"></div>
                 </li>
               </ul>
@@ -70,7 +70,8 @@
       return {
         defaultIndex: undefined,
         currentIndex: 0,
-        toilets: {}
+        toilets: {},
+        revertToilets: []
       };
     },
     methods: {
@@ -100,6 +101,7 @@
         }
         ToiletService.getToilets(userInfo.building).then(result => {
           this.toilets = result;
+          this.revertToilets = Object.keys(result).sort((a, b) => b - a);
           this.$nextTick(() => {
             this.scrollToFloor(userInfo.floor);
           })
