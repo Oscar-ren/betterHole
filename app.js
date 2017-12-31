@@ -3,6 +3,7 @@ const path = require('path');
 // const compression = require('compression');
 // const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const historyFalllback = require('connect-history-api-fallback');
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.set('view engine', 'html');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(historyFalllback());
+
 // app.use(compression());
 // app.use(cookieParser());
 app.use(express.static(path.resolve('dist/mobile'), {extensions: ['html']}));

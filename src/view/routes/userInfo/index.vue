@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <div class="markup">
-        <x-button class="operate" link="/home"></x-button>
+        <a href="/home"><i class="operate icon-user"></i></a>
       </div>
     </header>
     <div class="wrapper">
@@ -52,12 +52,13 @@
 
     },
     mounted() {
-      let userInfo = UserService.getUserInfo();
-      if (!userInfo.sex) {
-        this.$router.push('/');
-      }
-      this.building = userInfo.building;
-      this.floor = userInfo.floor;
+      UserService.getUserInfo().then(userInfo => {
+        if (!userInfo.sex) {
+          this.$router.push('/');
+        }
+        this.building = userInfo.building;
+        this.floor = userInfo.floor;
+      });
     }
   }
 </script>
@@ -67,21 +68,22 @@
     & .markup {
       display: inline-block;
       position: relative;
-      background: #fff;
-      height: 12vw;
-      width: 10vw;
+      background: rgba(162, 236, 244, 0.12);
+      height: 11vw;
+      width: 9vw;
       margin-top: 12vw;
-      border-right: 6vw solid #fff;
+      border-right: 6vw solid transparent;
       border-top-right-radius: 6vw;
       border-bottom-right-radius: 6vw;
 
       & .operate {
         display: inline-block;
-        background: #000000;
-        height: 10vw;
-        width: 10vw;
-        border-radius: 50%;
-        margin: 1vw 0 1vw 4vw;
+        background: url('/assets/images/back.png');
+        background-size: contain;
+        height: 7vw;
+        width: 7vw;
+        margin: 1.9vw 0 2vw 5vw;;
+        position: relative;
       }
     }
   }
@@ -92,10 +94,12 @@
     align-items: center;
   }
   .avatar {
+    background: #eeeeee;
+    background: url('/assets/images/avatar.png');
+    background-size: contain;
     display: inline-block;
     text-indent: -999vw;
     margin-bottom: 20px;
-    background: #eeeeee;
     width: 30vw;
     height: 30vw;
     border-radius: 50%;

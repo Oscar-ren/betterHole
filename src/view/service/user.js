@@ -2,7 +2,7 @@
 
 let userInfo = {
   sex: 'male',
-  building: 'A',
+  building: 'B',
   floor: 7,
 };
 
@@ -11,7 +11,9 @@ const updateUserInfo = function updateUserInfo (data) {
 }
 
 const getUserInfo = function getUserInfo () {
-  return {...userInfo};
+  return new Promise((resolve, reject) => {
+    resolve({...userInfo})
+  })
 }
 
 export default {

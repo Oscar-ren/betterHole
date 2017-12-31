@@ -1,12 +1,10 @@
 <template>
   <router-view></router-view>
-  <!--<div id="app">-->
-    <!--<transition name="pop-in" >-->
-      <!--<keep-alive>-->
-        <!--<router-view></router-view>-->
-      <!--</keep-alive>-->
-    <!--</transition>-->
-  <!--</div>-->
+  <!--<transition name="pop-in" >-->
+  <!--<keep-alive>-->
+  <!--<router-view></router-view>-->
+  <!--</keep-alive>-->
+  <!--</transition>-->
 </template>
 
 <script>
@@ -16,7 +14,10 @@
 </script>
 
 <style lang="less">
-  @import '~vux/src/styles/reset.less';
+  html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
 
   html,body {
     position: relative;
@@ -24,7 +25,21 @@
   }
 
   body {
+    line-height: 1.6;
     background-color: #fbf9fe;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  a img {
+    border: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   #app {
