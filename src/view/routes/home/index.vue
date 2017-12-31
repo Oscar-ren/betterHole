@@ -82,6 +82,9 @@
       },
       changeIndex (index) {
         this.currentIndex = index;
+        ToiletService.getToilets(index === 0 ? 'A' : 'B').then(result => {
+          this.toilets = result;
+        });
       }
     },
     mounted() {
