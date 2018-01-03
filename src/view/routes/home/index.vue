@@ -71,7 +71,8 @@
         defaultIndex: undefined,
         currentIndex: 0,
         toilets: {},
-        revertToilets: []
+        revertToilets: [],
+        timer: null
       };
     },
     methods: {
@@ -83,12 +84,28 @@
       },
       changeIndex (index) {
         this.currentIndex = index;
-        ToiletService.getToilets(index === 0 ? 'A' : 'B').then(result => {
-          this.toilets = result;
-        });
+        this.getToilets(index === 0 ? 'A' : 'B')
       },
       changeRoute() {
+        if (this.timer) {
+          clearInterval(this.timer);
+        }
         this.$router.push('/userInfo');
+      },
+      getToilets (building) {
+        if (this.timer) {
+          clearInterval(this.timer);
+        }
+        this.timer = setInterval(() => {
+          ToiletService.getToilets(building).then(result => {
+            this.revertToilets = Object.keys(result).sort((a, b) => b - a);
+            this.toilets = result;
+          })
+        }, 5000);
+        return ToiletService.getToilets(building).then(result => {
+          this.revertToilets = Object.keys(result).sort((a, b) => b - a);
+          this.toilets = result;
+        });
       }
     },
     mounted() {
@@ -99,9 +116,7 @@
         } else {
           this.defaultIndex = 0;
         }
-        ToiletService.getToilets(userInfo.building).then(result => {
-          this.toilets = result;
-          this.revertToilets = Object.keys(result).sort((a, b) => b - a);
+        this.getToilets(userInfo.building).then(() => {
           this.$nextTick(() => {
             this.scrollToFloor(userInfo.floor);
           })

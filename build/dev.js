@@ -18,9 +18,7 @@ var proxyService = require('./services/proxyService');
 var app = express();
 
 // handle fallback for HTML5 history API
-app.use(historyFalllback({
-  verbose: true
-}));
+app.use(historyFalllback());
 
 var compiler = webpack(webpackConfig);
 var port = process.env.PORT || config.dev.port;

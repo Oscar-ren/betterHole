@@ -176,9 +176,9 @@
   .icon-male {
     font-size: 0;
     display: inline-block;
-    height: 14vw;
-    width: 14vw;
-    margin: 13vw 0;
+    height: 12vw;
+    width: 12vw;
+    margin: 14vw 0;
     background: url('/assets/images/male.png') no-repeat;
     background-size: contain;
   }
@@ -186,9 +186,9 @@
   .icon-female {
     font-size: 0;
     display: inline-block;
-    height: 14vw;
-    width: 14vw;
-    margin: 13vw 0;
+    height: 12vw;
+    width: 12vw;
+    margin: 14vw 0;
     background: url('/assets/images/female.png') no-repeat;
     background-size: contain;
   }
@@ -209,6 +209,7 @@
     line-height: 40vw;
     border: 1px solid #ccc;
     display: block;
+    font-size: 1.2rem;
     margin: 5vh 0;
     border-radius: 50%;
     text-align: center;
