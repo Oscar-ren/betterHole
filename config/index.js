@@ -23,7 +23,7 @@ module.exports = {
     },
     autoOpenBrowser: true,
     // Set host if autoOpenBrowser is true
-    host: 'w.flow.360es.cn',
+    host: 'w.haokeng.com',
     cssModulesExclude: [/node_modules/],
     cssSourceMap: false,
     staticPath: 'assets',
