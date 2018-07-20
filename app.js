@@ -29,9 +29,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 39,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 2,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 1,
         "ext_info": ""
       },
@@ -43,23 +43,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 7,
-        "toilet_type": "male",
+        "toilet_id": 4,
+        "toilet_type": "female",
         "building": "A",
-        "floor": 2,
-        "ext_info": ""
-      },
-      {
-        "toilet_id": 41,
-        "toilet_type": "male",
-        "building": "B",
-        "floor": 2,
-        "ext_info": ""
-      },
-      {
-        "toilet_id": 45,
-        "toilet_type": "male",
-        "building": "B",
         "floor": 2,
         "ext_info": ""
       },
@@ -71,6 +57,27 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
+        "toilet_id": 6,
+        "toilet_type": "female",
+        "building": "A",
+        "floor": 3,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 7,
+        "toilet_type": "male",
+        "building": "A",
+        "floor": 2,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 8,
+        "toilet_type": "female",
+        "building": "A",
+        "floor": 2,
+        "ext_info": ""
+      },
+      {
         "toilet_id": 9,
         "toilet_type": "male",
         "building": "A",
@@ -78,16 +85,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 43,
-        "toilet_type": "male",
-        "building": "B",
-        "floor": 3,
-        "ext_info": ""
-      },
-      {
-        "toilet_id": 47,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 10,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 3,
         "ext_info": ""
       },
@@ -99,9 +99,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 49,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 12,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 4,
         "ext_info": ""
       },
@@ -113,9 +113,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 51,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 14,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 5,
         "ext_info": ""
       },
@@ -127,9 +127,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 53,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 16,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 6,
         "ext_info": ""
       },
@@ -141,9 +141,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 55,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 18,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 7,
         "ext_info": ""
       },
@@ -155,9 +155,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 57,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 20,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 8,
         "ext_info": ""
       },
@@ -169,9 +169,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 59,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 22,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 9,
         "ext_info": ""
       },
@@ -183,9 +183,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 61,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 24,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 10,
         "ext_info": ""
       },
@@ -197,9 +197,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 63,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 26,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 11,
         "ext_info": ""
       },
@@ -211,9 +211,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 65,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 28,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 12,
         "ext_info": ""
       },
@@ -225,9 +225,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 67,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 30,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 13,
         "ext_info": ""
       },
@@ -239,9 +239,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 69,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 32,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 14,
         "ext_info": ""
       },
@@ -253,9 +253,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 71,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 34,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 15,
         "ext_info": ""
       },
@@ -267,9 +267,9 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
-        "toilet_id": 73,
-        "toilet_type": "male",
-        "building": "B",
+        "toilet_id": 36,
+        "toilet_type": "female",
+        "building": "A",
         "floor": 16,
         "ext_info": ""
       },
@@ -281,10 +281,283 @@ app.get('/v1/toilets', function(req, res) {
         "ext_info": ""
       },
       {
+        "toilet_id": 38,
+        "toilet_type": "female",
+        "building": "A",
+        "floor": 17,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 39,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 1,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 40,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 1,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 41,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 2,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 42,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 2,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 43,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 3,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 44,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 3,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 45,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 2,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 46,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 2,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 47,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 3,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 48,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 3,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 49,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 4,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 50,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 4,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 51,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 5,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 52,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 5,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 53,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 6,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 54,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 6,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 55,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 7,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 56,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 7,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 57,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 8,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 58,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 8,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 59,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 9,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 60,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 9,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 61,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 10,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 62,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 10,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 63,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 11,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 64,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 11,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 65,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 12,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 66,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 12,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 67,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 13,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 68,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 13,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 69,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 14,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 70,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 14,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 71,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 15,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 72,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 15,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 73,
+        "toilet_type": "male",
+        "building": "B",
+        "floor": 16,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 74,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 16,
+        "ext_info": ""
+      },
+      {
         "toilet_id": 75,
         "toilet_type": "male",
         "building": "B",
         "floor": 17,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 76,
+        "toilet_type": "female",
+        "building": "B",
+        "floor": 17,
+        "ext_info": ""
+      },
+      {
+        "toilet_id": 77,
+        "toilet_type": "male",
+        "building": "A",
+        "floor": 0,
         "ext_info": ""
       }
     ]
