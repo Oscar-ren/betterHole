@@ -23,17 +23,14 @@ module.exports = {
     },
     autoOpenBrowser: true,
     // Set host if autoOpenBrowser is true
-    host: 'w.haokeng.com',
+    host: '127.0.0.1',
     cssModulesExclude: [/node_modules/],
     cssSourceMap: false,
     staticPath: 'assets',
-    port: 8090,
+    port: 9000,
     proxyTable: {
-      '/api/v1': {
-        secure: false,
-        target: `http://${devEnv.API_HOST}/`,
-        changeOrigin: true,
-        logLevel: 'debug'
+      '/v1': {
+        target: 'http://localhost:8090'
       }
     }
   }
