@@ -37,6 +37,7 @@ const getToilets = function getToilets (building = 'A') {
         // }
         //
         // console.log(revertFloor)
+        console.log(floors)
         return floors;
       });
   });
